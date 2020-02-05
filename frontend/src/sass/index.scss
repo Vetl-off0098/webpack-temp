@@ -1,0 +1,265 @@
+@charset "UTF-8";
+@import "vars";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+  font-family: $default-font;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 320px;
+  min-height: 320px;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: $p-text-color;
+}
+
+.wrap-container {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+.main {
+  position: relative;
+  padding: 15px 0;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  color: $p-text-color;
+  font-weight: 500;
+  &._s {
+    color: $s-text-color;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: #FAAD3D;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, .body0 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+  color: #B12D27;
+}
+
+.body1 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+._small {
+  text-transform: lowercase;
+}
+
+._sub {
+  position: relative;
+  &:before {
+    display: block;
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+}
+
+img	{
+  display: block;
+}
+
+strong {
+  font-weight: 700;
+}
+
+label {
+  cursor: pointer;
+}
+
+.check {
+  display: none;
+  &:checked+.check-label:before {
+    background-image: url(../svg/check.svg);
+  }
+}
+.check-label {
+  position: relative;
+  padding-left: 45px;
+  &:before {
+    display: block;
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background-color: rgba(255, 255 , 255, 0.7);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 4px;
+    border: 1px solid #FAAD3D;
+  }
+}
+
+.button,
+.input {
+  width: 100%;
+  max-width: 240px;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 0.875rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.button {
+  align-items: center;
+  font-weight: 700;
+  color: $s-text-color;
+  background-color: #FAAD3D;
+  box-shadow: 0 4px 10px 0 rgba(255, 141, 44, 0.25);
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  &:focus, &:active, &:hover {
+    color: #FAAD3D;
+    background-color: #fff;
+    border: 1px solid #FAAD3D;
+  }
+  &._s {
+    color: #11998e;
+    background-image: none;
+    background-color: $background-color;
+    border: 1px solid #11998e;
+    box-shadow: 0 4px 10px 0 rgba(17, 153, 142, 0.25);
+    &:focus, &:active, &:hover {
+      color: $s-text-color;
+      background-color: #11998e;
+    }
+  }
+}
+
+.input {
+  background-color: #f4f8f7;
+  text-align: left;
+  border: 1px solid #FAAD3D;
+  &:focus, &:active, &:hover {
+    border: 1px solid #49e6aa;
+  }
+  &:invalid:not(:placeholder-shown),
+  &._error {
+    border: 1px solid #FF0000;
+  }
+}
+
+._vk {
+  width: 41px;
+  height: 41px;
+  background-image: url(../img/vk.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+._p {
+  color: $p-text-color;
+}
+
+._s {
+  color: $s-text-color;
+}
+
+@import "grid";
+@import "media";
+
+@import "layout/main";
+
+.modal{
+  position:fixed;
+  z-index:100;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+.modal,.modal__checkbox{
+  display:none
+}
+.modal__checkbox:checked+.modal{
+  display:flex;
+  align-items:center;
+}
+.modal__box{
+  max-width:410px;
+  max-height: 100%;
+  margin:auto;
+  padding: 15px 0;
+  background-color: #fff;
+  border-radius: 40px;
+  overflow: auto;
+  &._big {
+    max-width: 400px;
+  }
+}
+@media (min-width: 992px) {
+  .modal__box{
+    &._big {
+      max-width: 800px;
+    }
+  }
+}
+.modal__bg{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,.6)
+}
+.modal__close{
+  position:absolute;
+  top:5px;
+  right:5px;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background-color:#FAAD3D;
+  background-image: url(../img/close.png);
+  background-repeat:no-repeat;
+  background-position:50%
+}
+.modal__label-box {
+  width: 100%;
+  max-width: 350px;
+  font-size: 12px;
+  padding: 15px 15px 23px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.modal__input {
+  max-width: 100%;
+}

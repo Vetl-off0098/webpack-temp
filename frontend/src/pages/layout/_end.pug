@@ -1,0 +1,85 @@
+input#modal-close.modal__checkbox(type="checkbox")
+aside.modal
+    label.modal__bg(for="modal-close")
+    ._col-12._p-n.modal__box
+        form._row._p-n(action="/mail.php" method="POST")
+            ._col-12
+                input.input.modal__input(name="name" type="text" placeholder="Ваше имя" required="required")
+            ._col-12
+                input.input.modal__input(name="phone" type="tel" placeholder="Ваш телефон" required="required")
+            ._col-12
+                input.input.modal__input(name="email" type="email" placeholder="Ваш e-mail")
+            ._col-12
+                button.button.modal__input(type="submit")
+                    | Оставить заявку
+            .modal__label-box
+                input#check2.check(type="checkbox" checked="checked" required="required")
+                label.check-label(for="check2")
+                    | Даю согласие на&nbsp;обработку
+                    br
+                    a.link(href="/privacy-policy/") персональных данных
+    label.modal__close(for="modal-close")
+
+input#modal-prod.modal__checkbox(type="checkbox")
+aside.modal
+    label.modal__bg(for="modal-prod")
+    ._col-12.modal__box._big
+        h3._col-12.catalog__caption
+            | Абакус 17 рядов
+        ._row.catalog__box
+            .catalog__item
+                .catalog__image(style=`background-image:url(${require('../../img/pic.png')})`)
+            .catalog__item
+                .catalog__price._left(data-old="420")
+                    | 300
+                .catalog__text
+                    | Пластиковый 17&nbsp;разрядный абакус, высококачественный пластик, бусины коричневые, с&nbsp;выделенными черными.
+                .catalog__characters
+                    .catalog__char
+                        | 7 x 5.5 x 7.5
+                    .catalog__char
+                        | Упаковка не входит в цену
+                    .catalog__char
+                        | От 20 шт доставка бесплатно
+                .catalog__color-box
+                    .catalog__colors-title Цвет
+                    label
+                        input.catalog__radio(type="radio" name="color" value="1" checked)
+                        .catalog__color(style=`background-image:url(${require("../../img/c1.png")})`)
+                    label
+                        input.catalog__radio(type="radio" name="color" value="2")
+                        .catalog__color(style=`background-image:url(${require("../../img/c2.png")})`)
+                    label
+                        input.catalog__radio(type="radio" name="color" value="3")
+                        .catalog__color(style=`background-image:url(${require("../../img/c1.png")})`)
+                    label
+                        input.catalog__radio(type="radio" name="color" value="4")
+                        .catalog__color(style=`background-image:url(${require("../../img/c2.png")})`)
+                .catalog__size-box
+                    .catalog__size-title Размер
+                    label
+                        input.catalog__radio(type="radio" name="size" value="1" checked)
+                        .catalog__size 1
+                    label
+                        input.catalog__radio(type="radio" name="size" value="2")
+                        .catalog__size 2
+                    label
+                        input.catalog__radio(type="radio" name="size" value="3")
+                        .catalog__size 3
+                    label
+                        input.catalog__radio(type="radio" name="size" value="4")
+                        .catalog__size 4
+                .catalog__quantity
+                    button.button._s.catalog__minus(type="button" data-step="-1") -
+                    input#prod-number.catalog__number(type="text" value="1")
+                    button.button._s.catalog__plus(type="button" data-step="1") +
+                    .catalog__btn-cart
+                        label.button.catalog__btn(for="modal-cart" data-id="55") В корзину
+    label.modal__close(for="modal-prod")
+
+input#modal-cart.modal__checkbox(type="checkbox")
+aside.modal
+    label.modal__bg(for="modal-cart")
+    ._col-12.modal__box._big
+        | Корзина
+    label.modal__close(for="modal-cart")

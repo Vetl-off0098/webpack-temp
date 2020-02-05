@@ -1,0 +1,27 @@
+.availability {
+  &__item {
+    display: flex;
+    align-items: center;
+    min-height: 335px;
+    padding: 25px;
+    background-image: url(../img/availability.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+    border-radius: 40px;
+    color: #fff;
+    line-height: 1.375rem;
+    box-sizing: border-box;
+  }
+  &__text {
+    max-width: 418px;
+  }
+}
+
+@media (min-width: 768px) {
+  .availability {
+    &__item {
+      padding: 25px 70px;
+    }
+  }
+}

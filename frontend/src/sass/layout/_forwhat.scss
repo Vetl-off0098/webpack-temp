@@ -1,0 +1,20 @@
+.forwhat {
+  background: rgba(51, 169, 120, 0.18);
+  padding-top: 15px;
+  font-weight: 500;
+  &__image {
+    min-height: 280px;
+    background-image: url(../img/forwhat.png);
+    background-repeat: no-repeat;
+    background-position: top 15px center;
+    background-size: auto 250px;
+  }
+}
+
+@media (min-width: 768px) {
+  .forwhat {
+    &__image {
+      order: 1;
+    }
+  }
+}

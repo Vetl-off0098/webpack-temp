@@ -1,0 +1,26 @@
+.about {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  font-weight: 500;
+  border-radius: 40px;
+  border: 2px solid #FAAD3D;
+  box-shadow: 0 4px 10px 0 rgba(255, 141, 44, 0.25);
+  background-color: #fff;
+  box-sizing: border-box;
+  &._bg1 {
+    background-image: url(../img/about.png);
+  }
+  &._bg2 {
+    background-image: url(../img/payment.png);
+  }
+  &._bg3 {
+    background-image: url(../img/delivery.png);
+  }
+  &__text {
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,23 @@
+.footer {
+  background-color: #2b96ca;
+  min-height: 172px;
+  &__container {
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  &__logo-box {
+    position: relative;
+    padding: 15px;
+  }
+  &__vk {
+    position: absolute;
+    z-index: 2;
+    top: 15px;
+    right: 15px;
+  }
+  &__item {
+    width: 100%;
+    max-width: 228px + 30;
+  }
+}

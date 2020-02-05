@@ -1,0 +1,22 @@
+.scores {
+  background: rgba(254, 204, 26, 0.18);
+  font-size: 1.125rem;
+  padding-top: 15px;
+  font-weight: 500;
+  &__image {
+    min-height: 314px;
+    background-image: url(../img/scores.png);
+    background-repeat: no-repeat;
+    background-position: top 15px center;
+    background-size: auto 284px;
+  }
+  &__btn-box {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .scores {
+  }
+}

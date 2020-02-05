@@ -1,0 +1,40 @@
+section.contacts._container._row
+    h3._col-12.catalog__caption
+        | Контакты
+    ._row.contacts__box
+        .contacts__item
+            form._row._p-n(action="/mail.php" method="POST")
+                ._col-12
+                    input.input.modal__input(name="name" type="text" placeholder="Ваше имя" required="required")
+                ._col-12
+                    input.input.modal__input(name="phone" type="tel" placeholder="Ваш телефон" required="required")
+                ._col-12
+                    input.input.modal__input(name="email" type="email" placeholder="Ваш e-mail")
+                ._col-12
+                    button.button.modal__input(type="submit")
+                        | Оставить заявку
+                .modal__label-box
+                    input#checkc.check(type="checkbox" checked="checked" required="required")
+                    label.check-label(for="checkc")
+                        | Даю согласие на&nbsp;обработку
+                        br
+                        a.link(href="/privacy-policy/") персональных данных
+        .contacts__block
+            .contacts__title._i1
+                | Адрес
+            .contacts__text
+                | Россия, г.Казань
+                br
+                | ул. Столярова, д.9а
+            .contacts__title._i2
+                | Контакты
+            .contacts__text
+                | Email: 12345@gmail.com
+                br
+                | Phone: +7 987 236 3763
+            .contacts__title._i3
+                | Режим работы
+            .contacts__text
+                | пн-пт: 09:00 – 20:00
+                br
+                | сб,вс: 10:30 – 22:00

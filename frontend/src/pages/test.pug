@@ -1,0 +1,185 @@
+doctype html
+html(lang="ru-RU")
+    head
+        //- include _head
+        meta(charset="utf-8")
+
+        title= "Site"
+
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(name="description", content="Site")
+        meta(name="keywords", content="Site")
+        meta(name="robots", content="index, follow")
+        meta(property="og:title", content="Site")
+        meta(property="og:description", content="")
+        meta(property="og:url", content="http://test.ru/")
+        meta(property="og:type", content="website")
+        meta(property="og:image", content="//test.ru/img/image.jpg")
+        meta(property="og:locale", content="ru_RU")
+        link(rel="icon", sizes="16x16", href="/favicon16.png")
+        link(rel="icon", sizes="32x32", href="/favicon32.png")
+        link(rel="icon", sizes="64x64", href="/favicon64.png")
+        link(rel="apple-touch-icon-precomposed", href="//test.ru/img/image-180x180.jpg")
+        meta(name="msapplication-TileImage", content="//test.ru/img/image-270x270.jpg")
+    body
+        .wrapper
+            include _counters
+            .wrap-container
+                //- include _top-menu
+                .top-menu._container._row
+                    a.link.top-menu__link(href="/")
+                        | Главная
+                    a.link.top-menu__link(href="/about/")
+                        | О нас
+                    a.link.top-menu__link(href="/payment/")
+                        | Оплата
+                    a.link.top-menu__link(href="/delivery/")
+                        | Доставка
+                    a.link.top-menu__link(href="/contacts/")
+                        | Контакты
+                    a.link.top-menu__logo-box(href="/")
+                        img.top-menu__logo(src=require("../../img/logo.png") alt="Uniqum kids")
+                    .top-menu__phone-box
+                        a.link.top-menu__phone(href="tel:+79258871100")
+                            | +7 (925) 887-11-00
+                        a.link.top-menu__phone(href="tel:+79151100063")
+                            | ‭+7 (915) 110-00-63
+                    .top-menu__soc
+                        a.link._vk(href="#")
+                    label.top-menu__cart.top-menu__link(for="modal-cart" data-numb="3")
+                        | Корзина
+                main.main
+                    //- block content
+                    header.header
+                        .header__container
+                    section.scores
+                        ._container._row
+                            ._col-12._col-md-7._col-lg-6._col-xl-5.scores__image
+                            ._col-12._col-md-5._col-lg-6._col-xl-7._p-n
+                                h3._col-12.scores__caption
+                                    | Счеты Абакус (сбран)
+                                ._col-12.scores__text
+                                    | Продажа деревянных и&nbsp;пластиковых счёт абакус, соробан для
+                                    | индивидуального использования и&nbsp;для обучающих центров.
+                                    | А&nbsp;так&nbsp;же универсальные абакусы любого вида под заказ.
+                                ._col-12.scores__btn-box
+                                    label.button(for="modal-close") Подробнее
+                    section.forwhat
+                        ._container._row
+                            ._col-12._col-md-7._col-lg-6._col-xl-5.forwhat__image
+                            ._col-12._col-md-5._col-lg-6._col-xl-7._p-n
+                                h3._col-12.scores__caption
+                                    | Для чего нужен абакус?
+                                ._col-12.scores__text
+                                    | Счеты Абакус подходят для ментальной арифметики.
+                                    | Если хотите, чтобы ребенок научился считать, то вместо
+                                    | калькулятора ему нужно дать в руки абакус и лучше как можно раньше.
+                                    br
+                                    br
+                                    | В задачи соробана входит: развитие концентрации, внимания ребенка,
+                                    | развитие фотографической памяти и воображения, наблюдательности
+                                    | и воображения.
+                    section.catalog._container._row
+                        h3._col-12.catalog__caption
+                            | Каталог товаров
+                        .catalog__item
+                            .catalog__image(style=`background-image:url(${require('../../img/pic.png')})`)
+                            .catalog__title
+                                | Абакус 17 рядов
+                            .catalog__price(data-old="420")
+                                | 300
+                            .catalog__btn-box
+                                label.button.catalog__btn(for="modal-cart" data-id="55") В корзину
+                            .catalog__btn-box
+                                label.button._s.catalog__btn(for="modal-prod") Подробнее
+                        .catalog__item
+                            .catalog__image(style=`background-image:url(${require('../../img/pic.png')})`)
+                            .catalog__title
+                                | Абакус 17 рядов
+                            .catalog__price(data-old="420")
+                                | 300
+                            .catalog__btn-box
+                                label.button.catalog__btn(for="modal-cart" data-id="55") В корзину
+                            .catalog__btn-box
+                                label.button._s.catalog__btn(for="modal-prod") Подробнее
+                        .catalog__item
+                            .catalog__image(style=`background-image:url(${require('../../img/pic.png')})`)
+                            .catalog__title
+                                | Абакус 17 рядов
+                            .catalog__price(data-old="420")
+                                | 300
+                            .catalog__btn-box
+                                label.button.catalog__btn(for="modal-cart" data-id="55") В корзину
+                            .catalog__btn-box
+                                label.button._s.catalog__btn(for="modal-prod") Подробнее
+                        .catalog__item
+                            .catalog__image(style=`background-image:url(${require('../../img/pic.png')})`)
+                            .catalog__title
+                                | Абакус 17 рядов
+                            .catalog__price(data-old="420")
+                                | 300
+                            .catalog__btn-box
+                                label.button.catalog__btn(for="modal-cart" data-id="55") В корзину
+                            .catalog__btn-box
+                                label.button._s.catalog__btn(for="modal-prod") Подробнее
+                        .catalog__item
+                            .catalog__image(style=`background-image:url(${require('../../img/pic.png')})`)
+                            .catalog__title
+                                | Абакус 17 рядов
+                            .catalog__price(data-old="420")
+                                | 300
+                            .catalog__btn-box
+                                label.button.catalog__btn(for="modal-cart" data-id="55") В корзину
+                            .catalog__btn-box
+                                label.button._s.catalog__btn(for="modal-prod") Подробнее
+                        .catalog__item
+                            .catalog__image(style=`background-image:url(${require('../../img/pic.png')})`)
+                            .catalog__title
+                                | Абакус 17 рядов
+                            .catalog__price(data-old="420")
+                                | 300
+                            .catalog__btn-box
+                                label.button.catalog__btn(for="modal-cart" data-id="55") В корзину
+                            .catalog__btn-box
+                                label.button._s.catalog__btn(for="modal-prod") Подробнее
+                    section.availability._container._row
+                        ._col-12
+                            .availability__item
+                                .availability__text
+                                    | В&nbsp;нашем магазине есть в&nbsp;наличии качественные деревяные
+                                    | и&nbsp;пластиковые счеты абакус, соробан, как для индивидуального
+                                    | использования (маленькие, 13&nbsp;разрядов, 15&nbsp;разрядов), так
+                                    | и&nbsp;для обучающих центров (большие демонстрационные, 13&nbsp;разрядов).
+                                    | Также под заказ мы&nbsp;доставим Вам универсальные абакусы любых
+                                    | цветов и&nbsp;с&nbsp;любым количеством разрядов.
+            //- include _footer
+            footer.footer
+                ._container._row.footer__container
+                    .footer__logo-box
+                        a.link(href="/")
+                            img.footer__logo(src=require("../../img/logo2.png") alt="Uniqum kids")
+                        a.link._vk.footer__vk(href="#")
+                    ._row.footer__item
+                        a.link._col-12._s(href="tel:+79258871100")
+                            | +7 (925) 887-11-00
+                        a.link._col-12._s(href="tel:+79151100063")
+                            | ‭+7 (915) 110-00-63
+                        a.link._col-12._s(href="mailto:zakaz@abacus-shop.com")
+                            | zakaz@abacus-shop.com
+                    ._row.footer__item
+                        a.link._col-12._s(href="/")
+                            | Главная
+                        a.link._col-12._s(href="/about/")
+                            | О нас
+                        a.link._col-12._s(href="/payment/")
+                            | Оплата
+                    ._row.footer__item
+                        a.link._col-12._s(href="/delivery/")
+                            | Доставка
+                        a.link._col-12._s(href="/contacts/")
+                            | Контакты
+                        a.link._col-12._s(href="#")
+                            | Политика в отношении персональных данных
+        include _end
+        script
+            include ../../script.js

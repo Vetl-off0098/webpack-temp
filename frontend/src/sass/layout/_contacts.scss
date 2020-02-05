@@ -1,0 +1,34 @@
+.contacts {
+  &__box {
+    width: 100%;
+    justify-content: center;
+  }
+  &__item {
+    width: 100%;
+    max-width: 400px;
+  }
+  &__block {
+    padding: 15px;
+  }
+  &__title {
+    padding-left: 30px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto 20px;
+    &._i1 {
+      background-image: url(../svg/geo.svg);
+    }
+    &._i2 {
+      background-image: url(../svg/tel.svg);
+    }
+    &._i3 {
+      background-image: url(../svg/time.svg);
+    }
+  }
+  &__text {
+    padding: 15px 0 15px 30px;
+    color: #666666;
+  }
+}
